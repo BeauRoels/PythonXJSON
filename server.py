@@ -1,3 +1,4 @@
+import json
 rack_struc = {
  "rack": [
       { "Server": { "serv_id": "D1" , 

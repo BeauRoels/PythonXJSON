@@ -33,10 +33,17 @@ rack_struc = {
    ]
 }
 
+        !pip install dicttoxml
+from dicttoxml import dicttoxml
+xml_data = dicttoxml(rack_struc)
+print(xml_data)
+
 print('-----all device interfaces-----')
 for device in rack_struc["rack"]:
     print(device["device"]["dev_name"])
     for ipaddress in device["device"]["interfaces"]:
         print(ipaddress["interface"]+" => "+ipaddress["ipaddress"])
+
+
 
         

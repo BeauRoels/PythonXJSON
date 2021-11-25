@@ -1,3 +1,6 @@
+import yaml
+import json
+
 rack_struc = {
  "rack": [
       { "device": { "dev_id": "D1" ,"dev_name":"R1" , "role": "router","interfaces": 
@@ -27,7 +30,7 @@ rack_struc = {
    ]
 }
 
-import yaml
+
 yaml_data = yaml.dump(rack_struc)
 print(yaml_data)
 
@@ -36,7 +39,7 @@ from dicttoxml import dicttoxml
 xml_data = dicttoxml(rack_struc)
 print(xml_data)
 
-import json
+
 print('------1---------')
 print(type(rack_struc))
 print(rack_struc)
@@ -103,6 +106,3 @@ for connections in rack_struc["rack"]:
         ]
 }
 
-import yaml
-yaml_data = yaml.dump(server_struc)
-print(yaml_data)
